@@ -3,7 +3,7 @@ from django.db import models
 from django.utils import timezone
 
 class Usuario(models.Model):
-    SITUACAO = {"A": "Ativo", "I" : "Inativo", "S": "Suspenso"}
+    SITUACAO = {"A": "Ativo", "I" : "Inativo", "S": "Suspenso", "O":"outro",}
     login = models.CharField(max_length=20)
     senha = models.CharField(max_length=20)
     nome = models.CharField(max_length=75)
