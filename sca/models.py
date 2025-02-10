@@ -10,6 +10,6 @@ class Usuario(models.Model):
     situacao = models.CharField(max_length=1, choices=SITUACAO_CHOICES, default="A")
     data_alteracao = models.DateTimeField('data alteração')
 
-    def salvar(self):
+    def save(self, *args, **kwargs):
         self.data_alteracao = timezone.now()
-        self.save()
+        super(Usuario, self).save(*args, **kwargs)
